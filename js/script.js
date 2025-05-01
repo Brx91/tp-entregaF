@@ -40,16 +40,16 @@ new Perfil ("Corrediza", "alto", 6205, "Lateral", 0.600)
 
 
 document.getElementById("cotizacion").onclick = () => {
-    const anchoPedido = parseFloat(document.getElementById('ancho').value);
-    const altoPedido = parseFloat(document.getElementById('alto').value);
-    const totalPerfilAnchoCorrediza = corredizaAncho.reduce((total, perfil) => total + perfil.costoPerfil(), 0);
-    const totalPerfilAltoCorrediza = corredizaAlto.reduce((total, perfil) => total + perfil.costoPerfil(), 0);
+    const anchoPedido = parseFloat(document.getElementById('ancho').value)
+    const altoPedido = parseFloat(document.getElementById('alto').value)
+    const totalPerfilAnchoCorrediza = corredizaAncho.reduce((total, perfil) => total + perfil.costoPerfil(), 0) 
+    const totalPerfilAltoCorrediza = corredizaAlto.reduce((total, perfil) => total + perfil.costoPerfil(), 0)
 
-    const totalCosto =  (anchoPedido * totalPerfilAnchoCorrediza) + (altoPedido * totalPerfilAltoCorrediza);
+    const totalCostoCorrediza =  (anchoPedido * (totalPerfilAnchoCorrediza*2)) + (altoPedido * (totalPerfilAltoCorrediza*2))
     
 
-    const resultadoVidrio = (anchoPedido * altoPedido) * vidrio4Mm;
-    const resultadoTotal = totalCosto + resultadoVidrio;
+    const resultadoVidrio = (anchoPedido * altoPedido) * vidrio4Mm
+    const resultadoTotal = totalCostoCorrediza + resultadoVidrio
  
 
 document.getElementById("resultado").innerHTML = 
