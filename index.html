@@ -9,22 +9,39 @@
 </head>
 <body>
 
-    <h1>TP 2</h1>
+    <h2>TP FINAL</h2>
     <fieldset>
         <legend>Esquema</legend>
-    <h2>Listado de perfiles</h2>
-        <button id="listado" class="boton_listado">VER LISTADO DE PERFILES</button>
-        <ul id="listaPerfiles"></ul>
-        
-    <h2>Vidrio</h2>    
+    <div><img src="source/logo.png" alt="logo"></div>    
         <button id="valorVidrio" class="boton_vidrio">VER PRECIOS DE VIDRIO</button>
         <p id="precioVidrio"></p>
     
-    <h2>Cotizador</h2>    
+    <h2>Cotizador</h2>
+        <p>Seleccione el tipo de abertura</p>
+        <select name="seleccion" id="seleccion" class="boton_seleccion">
+            <option value="corrediza">Corrediza</option>
+            <option value="puerta">Puerta</option>
+            <option value="ventanaAbrir">Ventana de Abrir</option>
+            <option value="paniofijo">Paño Fijo</option>
+        </select>
+        <p>Seleccione el tipo de vidrio</p>
+        <select name="" id="">
+            <option value="">Vidrio 4mm</option>
+            <option value="">Vidrio Laminado 3+3</option>
+        </select>
+        <p>Seleccione el color</p>
+        <select name="" id="">
+            <option value="">Blanco</option>
+            <option value="">Negro</option>
+            <option value="">Anodizado Natural</option>
+        </select>
+        <p>Ingrese los datos</p>
         <input type="number" id="ancho" class="boton_ancho" placeholder="Ingrese el ancho">
         <input type="number" id="alto" class="boton_alto" placeholder="Ingrese el alto">
         <button id="cotizacion" class="boton_cotizacion">VER COTIZACION</button>
         <p id="resultado"></p>
+        <button id="agregar" class="boton_agregar">AGREGAR AL PEDIDO</button>
+        <button id="verPedido" class="boton_ver">VER PEDIDO</button>
 </fieldset>
     
 </body>

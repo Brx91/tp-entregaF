@@ -12,8 +12,10 @@
     display: flex;
     justify-content: center;
   }
-  
+
+
   fieldset {
+    background-image: url(../source/brushed_alu.webp);
     background-color: #fff;
     border: 2px solid #ddd;
     border-radius: 12px;
@@ -29,6 +31,14 @@
     padding: 0 10px;
     color: #333;
   }
+
+  img {
+    display: flex;
+    margin: auto;
+    width : 80%;
+    height: 30%;
+    padding-bottom: 15px;
+  }
   
   h1, h2 {
     text-align: center;
@@ -36,7 +46,7 @@
     color: #333;
   }
   
-  input, button {
+  input, button, select {
     width: 100%;
     padding: 10px;
     margin: 8px 0;
@@ -44,6 +54,7 @@
     border-radius: 8px;
     border: 1px solid #ccc;
   }
+  
   
   button {
     background-color: #007BFF;
@@ -57,7 +68,7 @@
     background-color: #0056b3;
   }
   
-  #resultado, #precioVidrio, #listaPerfiles {
+  #resultado, #precioVidrio, #seleccion  {
     margin-top: 15px;
     background-color: #fefefe;
     padding: 12px 16px;
@@ -67,9 +78,5 @@
     font-size: 16px;
   }
   
-  #listaPerfiles {
-    list-style: none;
-    padding-left: 20px;
-  }
-  
+ 
   
