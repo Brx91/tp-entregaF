@@ -38,14 +38,38 @@ new Perfil ("Corrediza", "alto", 6204, "Central", 0.545),
 new Perfil ("Corrediza", "alto", 6205, "Lateral", 0.600)
 ]
 
+class Accesorios {
+    constructor (tipo, nombre, precio, codigo) {
+        this.tipo = tipo,
+        this.nombre = nombre,
+        this.precio = precio,
+        this.codigo = codigo
+    }
+    
+}
+felpa = 2000
+
+const accesorios = [ 
+    new Accesorios ("Corrediza", "R42", 5000, "Rueda Doble"),
+    new Accesorios ("Corrediza", "cierre lateral", 2450, "Cierre Lateral"),
+    new Accesorios ("Corrediza", "felpon central", 500, "t93"),
+    new Accesorios ("Corrediza", "goma union", 3500, "t92"),
+    new Accesorios ("Corrediza", "tapa desague marco", 2500, "t91"),
+    new Accesorios ("Corrediza", "antiruido central", 500, "t89"),
+    new Accesorios ("Corrediza", "antiruido lateral", 500, "t90"),
+    new Accesorios ("Corrediza", "tapa desague frontal", 250, "t130"),
+    new Accesorios ("Corrediza", "tapa desague camara", 250, "t131")
+]
+
 
 document.getElementById("cotizacion").onclick = () => {
     const anchoPedido = parseFloat(document.getElementById('ancho').value)
     const altoPedido = parseFloat(document.getElementById('alto').value)
     const totalPerfilAnchoCorrediza = corredizaAncho.reduce((total, perfil) => total + perfil.costoPerfil(), 0) 
     const totalPerfilAltoCorrediza = corredizaAlto.reduce((total, perfil) => total + perfil.costoPerfil(), 0)
+    const sumaAccesorios = accesorios.reduce((total, accesorio) => total + accesorio.precio, 0)
 
-    const totalCostoCorrediza =  (anchoPedido * (totalPerfilAnchoCorrediza*2)) + (altoPedido * (totalPerfilAltoCorrediza*2))
+    const totalCostoCorrediza =  (anchoPedido * (totalPerfilAnchoCorrediza*2)) + (altoPedido * (totalPerfilAltoCorrediza*2)) + (sumaAccesorios)
     
 
     const resultadoVidrio = (anchoPedido * altoPedido) * vidrio4Mm
