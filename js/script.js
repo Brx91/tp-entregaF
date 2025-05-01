@@ -69,7 +69,7 @@ document.getElementById("cotizacion").onclick = () => {
     const totalPerfilAltoCorrediza = corredizaAlto.reduce((total, perfil) => total + perfil.costoPerfil(), 0)
     const sumaAccesorios = accesorios.reduce((total, accesorio) => total + accesorio.precio, 0)
 
-    const totalCostoCorrediza =  (anchoPedido * (totalPerfilAnchoCorrediza*2)) + (altoPedido * (totalPerfilAltoCorrediza*2)) + (sumaAccesorios)
+    const totalCostoCorrediza =  (anchoPedido * (totalPerfilAnchoCorrediza*2)) + (altoPedido * (totalPerfilAltoCorrediza*2)) + (sumaAccesorios*2)
     
 
     const resultadoVidrio = (anchoPedido * altoPedido) * vidrio4Mm
@@ -83,36 +83,3 @@ document.getElementById("resultado").innerHTML =
 
 
 
-/*
-// Perfiles de Puerta - Alto
-
-new Perfil("Puerta", "alto", 6214, "parante Puerta", 1.750),
-
-// Perfiles de Ventana - Alto
-new Perfil("Ventana", "alto", 7100, "Vertical Ventana", 0.875)
-]
-
-
-const corredizaAlto = [umbral, zocalo, zocaloAlto]
-
-
-class CorredizaAncho {
-    constructor (codigo, nombre, pesoMetro) {
-        this.codigo = codigo,
-        this.nombre = nombre,
-        this.pesoMetro = pesoMetro   
-}
-    costoPerfil() {
-    return this.pesoMetro * precioAluminio
-    }
-
-}
-
-
-const umbral = new CorredizaAncho (6200, "Umbral", parseFloat(1))
-const zocalo = new CorredizaAncho (6201, "Zocalo", parseFloat(1))
-const zocaloAlto = new CorredizaAncho (6202, "Zocalo Alto", parseFloat(1))
-
-
-const perfiles = [umbral, zocalo, zocaloAlto];
-*/
