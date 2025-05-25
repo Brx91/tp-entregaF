@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/script.js"></script>
+    
     <title>Document</title>
 </head>
 <body>
@@ -18,22 +19,16 @@
     
     <h2>Cotizador</h2>
         <p>Seleccione el tipo de abertura</p>
-        <select name="seleccion" id="seleccion" class="boton_seleccion">
+        <select name="seleccion" id="tipoAbertura" class="boton_seleccion">
             <option value="corrediza">Corrediza</option>
             <option value="puerta">Puerta</option>
             <option value="ventanaAbrir">Ventana de Abrir</option>
             <option value="paniofijo">Paño Fijo</option>
         </select>
         <p>Seleccione el tipo de vidrio</p>
-        <select name="" id="">
-            <option value="">Vidrio 4mm</option>
-            <option value="">Vidrio Laminado 3+3</option>
-        </select>
-        <p>Seleccione el color</p>
-        <select name="" id="">
-            <option value="">Blanco</option>
-            <option value="">Negro</option>
-            <option value="">Anodizado Natural</option>
+        <select name="" id="tipoVidrio">
+            <option value="vidrio4mm">Vidrio 4mm</option>
+            <option value="laminado3_3">Vidrio Laminado 3+3</option>
         </select>
         <p>Ingrese los datos</p>
         <input type="number" id="ancho" class="boton_ancho" placeholder="Ingrese el ancho">
@@ -42,7 +37,8 @@
         <p id="resultado"></p>
         <button id="agregar" class="boton_agregar">AGREGAR AL PEDIDO</button>
         <button id="verPedido" class="boton_ver">VER PEDIDO</button>
+        <p id="pedido"></p>
 </fieldset>
-    
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
